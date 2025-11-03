@@ -222,5 +222,10 @@ public class PaperEnchantmentRegistryEntry implements EnchantmentRegistryEntry {
                 this.effects
             );
         }
+
+        public PaperBuilder effects(final DataComponentMap effects) {
+            this.effects = Checks.asArgument(effects, "effects");
+            return this;
+        }
     }
 }
